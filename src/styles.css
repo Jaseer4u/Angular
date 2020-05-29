@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/ngx-toastr/toastr.css";
+
+input.ng-invalid.ng-touched{
+ border-color: red;
+}
+input.ng-valid{
+    border-color: green;
+}
+
+.green-icon{
+    color: green;
+}
+.red-icon{
+    color: red;
+}
+table tr:hover{
+    cursor: pointer;
+}
+
+.ngx-pagination {
+    padding-left: 0px !important;
+  }
+  
+  .ngx-pagination .current,
+.btn-info {
+  background: #17a2b8 !important;
+  border: transparent !important;
+  border-radius: 20px !important;
+}
+
+  .ngx-pagination .current:hover {
+    background: #17a2b8 !important;
+    border-radius: 20px !important; 
+    border: transparent !important;
+  }

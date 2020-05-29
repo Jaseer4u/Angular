@@ -1,1 +1,26 @@
-<p>payment-detail-list works!</p>
+<table class="table table-hover">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">CardHolerName</th>
+        <th scope="col">CardNumber</th>
+        <th scope="col">ExpireDate</th>
+        <th scope="col"></th>
+    </tr>
+</thead>
+
+    <tr *ngFor="let pd of service.list | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
+        <td (click)="populateform(pd)">{{pd.CardHolerName}}</td>
+        <td (click)="populateform(pd)">{{pd.CardNumber}}</td>
+        <td (click)="populateform(pd)" >{{pd.ExpireDate}}</td>
+        <td (click)="deletedata(pd.PmId)"><i class="far fa-trash-alt fa-lg text-danger"></i></td>
+    </tr>
+    <tr class="clearfix"></tr>
+    <div class="pagination text-xs-center">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls> 
+</div>
+  
+    
+      
+   
+
+</table>

@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -8,19 +9,24 @@ import { PaymentDetailListComponent } from './payment-details/payment-detail-lis
 import { PaymentDetailsService } from './shared/payment-details.service';
 import { FormsModule  } from "@angular/forms";
 import { HttpClientModule  } from "@angular/common/http";
+import { ToastrModule } from 'ngx-toastr';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
     AppComponent,
     PaymentDetailsComponent,
     PaymentDetailComponent,
-    PaymentDetailListComponent   
-    
+    PaymentDetailListComponent 
   ],
-  imports: [
+  imports: [   
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule,
+    ToastrModule.forRoot()
+    
      
   ],
   providers: [PaymentDetailsService],
